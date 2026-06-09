@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Carbono</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌱 Calculadora de Emissão de Gás Carbônico</h1>
+
+    <div class="input-group">
+        <label>Km percorridos de carro por semana</label>
+        <input type="number" id="carro" value="0">
+    </div>
+
+    <div class="input-group">
+        <label>Viagens de avião por ano</label>
+        <input type="number" id="aviao" value="0">
+    </div>
+
+    <div class="input-group">
+        <label>Consumo de energia (kWh por mês)</label>
+        <input type="number" id="energia" value="0">
+    </div>
+
+    <div class="input-group">
+        <label>Botijões de gás utilizados por ano</label>
+        <input type="number" id="gas" value="0">
+    </div>
+
+    <div class="input-group">
+        <label>Horas de uso do ar-condicionado por dia</label>
+        <input type="number" id="ar" value="0">
+    </div>
+
+    <button onclick="calcular()">
+        Calcular Emissão
+    </button>
+
+    <button onclick="limparDados()" class="btn-limpar">
+        Limpar Dados
+    </button>
+
+    <div id="resultado" class="resultado">
+
+        <h2>Resultado</h2>
+
+        <p id="mensal"></p>
+        <p id="anual"></p>
+        <p id="nivel"></p>
+        <p id="arvores"></p>
+        <p id="dica"></p>
+
+        <canvas id="grafico"></canvas>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
